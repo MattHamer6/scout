@@ -1,0 +1,77 @@
+.homepage-calculator {
+	background: $purple-100;
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		//justify-content: center;
+		flex-direction: column;
+
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		@media only screen and (min-width: 1920px) {
+			justify-content: flex-start;
+		}
+		.content {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 455px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 575px;
+				margin-right: 115px;
+			}
+			h2 {
+				@extend %h2;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 30px;
+				}
+			}
+			h3 {
+				@extend %fontRegular;
+				margin-bottom: 1rem;
+				font-size: 20px;
+
+				@include media-breakpoint-up(md) {
+					font-size: 24px;
+				}
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 20px;
+					font-size: 28px;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 34px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 30px;
+					font-size: 40px;
+				}
+			}
+			p {
+				margin: 0;
+				@extend %fontRegular;
+				@extend %largeSizes;
+				color: $font-base;
+
+				@media only screen and (min-width: 1920px) {
+					width: 485px;
+				}
+			}
+		}
+	}
+}

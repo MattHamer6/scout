@@ -1,0 +1,141 @@
+.stamp-calculator {
+	background: $white;
+	width: 100%;
+	max-width: 450px;
+
+	@include media-breakpoint-up(md) {
+		width: 500px;
+		max-width: none;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 550px;
+	}
+	@include media-breakpoint-up(xl) {
+		width: 650px;
+	}
+	@media only screen and (min-width: 1920px) {
+		width: 800px;
+	}
+	&-wrapper {
+		padding: 25px;
+
+		@include media-breakpoint-up(md) {
+			padding: 45px;
+		}
+		@media only screen and (min-width: 1920px) {
+			padding: 60px;
+		}
+		form {
+			label.form-label {
+				display: block;
+				@extend %fontRegular;
+				@extend %largeSizes;
+				margin-bottom: 10px;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 15px;
+				}
+			}
+			aside {
+				margin-bottom: 10px;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 25px;
+				}
+				input,
+				select {
+					width: 100%;
+					border: 1px solid $grey-200;
+					padding: 0 10px;
+					@extend %fontRegular;
+					@extend %mediumSizes;
+					color: $grey-300;
+					padding: 0 25px;
+					height: 40px;
+
+					@include media-breakpoint-up(xl) {
+						height: 50px;
+					}
+					@media only screen and (min-width: 1920px) {
+						height: 60px;
+					}
+					&:focus {
+						outline: none;
+					}
+					&::placeholder {
+						color: $grey-300;
+						@extend %fontRegular;
+					}
+				}
+				select {
+					border-right: none;
+					appearance: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					background-image: url("/wp-content/themes/Visions/images/select-arrow.svg");
+					background-position: right;
+					background-repeat: no-repeat;
+					background-color: transparent;
+					background-size: 40px;
+
+					@include media-breakpoint-up(xl) {
+						background-size: 50px;
+					}
+					@media only screen and (min-width: 1920px) {
+						background-size: 60px;
+					}
+				}
+				&.property-price {
+					span {
+						position: relative;
+
+						&::before {
+							content: "£";
+							@extend %fontBold;
+							@extend %largeSizes;
+							position: absolute;
+							margin-left: 8px;
+							color: $grey-300;
+							height: 40px;
+							line-height: 40px;
+
+							@include media-breakpoint-up(xl) {
+								height: 50px;
+								line-height: 50px;
+							}
+							@media only screen and (min-width: 1920px) {
+								height: 60px;
+								line-height: 60px;
+							}
+						}
+					}
+				}
+			}
+		}
+		button {
+			border: none;
+			outline: none;
+			color: $white;
+			@extend %fontBold;
+			@extend %largeSizes;
+			padding: 8px 30px;
+			background: #ccc;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				background: $purple-100;
+			}
+		}
+		.stamp-amount,
+		.stamp-error {
+			margin-top: 25px;
+			@extend %fontRegular;
+			@extend %largeSizes;
+
+			span {
+				@extend %fontBold;
+				color: $orange;
+			}
+		}
+	}
+}

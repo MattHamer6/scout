@@ -1,0 +1,52 @@
+.team-hero {
+	position: relative;
+	background: $secondary;
+	top: -116px;
+	margin-bottom: -116px;
+	padding: 175px 0 50px;
+
+	@include media-breakpoint-up(lg) {
+		top: -106px;
+		margin-bottom: -106px;
+	}
+	@include media-breakpoint-up(xl) {
+		top: -130px;
+		margin-bottom: -130px;
+		padding: 225px 0 75px;
+	}
+	@media only screen and (min-width: 1920px) {
+		top: -157px;
+		margin-bottom: -157px;
+		padding: 290px 0 90px;
+	}
+	&-wrapper {
+		.content {
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(lg) {
+				width: 555px;
+				text-align: left;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 650px;
+			}
+			h1 {
+				@extend %h1;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 35px;
+				}
+			}
+			p {
+				@extend %headerIntro;
+				@extend %fontRegular;
+				margin: 0;
+			}
+		}
+	}
+}

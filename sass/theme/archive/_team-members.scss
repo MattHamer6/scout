@@ -1,0 +1,115 @@
+@import "includes/team-hero";
+@import "includes/team-search";
+@import "includes/team-form";
+@import "includes/single-members";
+
+.team-members {
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		.member {
+			width: calc(100% / 2 - 30px);
+			margin: 0 15px 30px;
+
+			@include media-breakpoint-up(md) {
+				width: 205px;
+				margin: 0 15px 30px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 260px;
+				margin: 0 30px 50px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 235px;
+				margin: 0 25px 50px;
+
+				&:nth-child(4n + 1) {
+					margin-left: 0;
+				}
+				&:nth-child(4n + 4) {
+					margin-right: 0;
+				}
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 315px;
+				margin: 0 50px 80px;
+			}
+			@include media-breakpoint-between(md, lg) {
+				&:nth-child(3n + 1) {
+					margin-left: 0;
+				}
+				&:nth-child(3n + 3) {
+					margin-right: 0;
+				}
+			}
+			&-wrapper {
+				a {
+					color: $font-base;
+					text-align: center;
+
+					img {
+						width: 100%;
+						height: auto;
+						transition: all 0.3s ease-in-out;
+						filter: grayscale(100%);
+						margin-bottom: 20px;
+
+						@include media-breakpoint-up(lg) {
+							margin-bottom: 30px;
+						}
+						@media only screen and (min-width: 1920px) {
+							margin-bottom: 40px;
+						}
+					}
+					h3 {
+						@extend %fontBold;
+						margin: 0;
+						@extend %mediumSizes;
+					}
+					p {
+						margin-bottom: 5px;
+						@extend %fontRegular;
+						@extend %largeSizes;
+						display: none;
+
+						@include media-breakpoint-up(md) {
+							display: block;
+						}
+					}
+					span {
+						@extend %fontRegular;
+						@extend %smallSizes;
+						display: none;
+
+						@include media-breakpoint-up(md) {
+							display: block;
+						}
+					}
+					&:hover {
+						text-decoration: none;
+
+						img {
+							filter: grayscale(0%);
+						}
+					}
+				}
+			}
+			&.hidden {
+				display: none;
+			}
+		}
+		nav {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.hidden {
+		display: none;
+	}
+}

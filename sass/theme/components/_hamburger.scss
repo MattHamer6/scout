@@ -1,0 +1,45 @@
+.header {
+	button {
+		padding: 0;
+		outline: none;
+		opacity: 1;
+
+		.hamburger-box {
+			width: 40px;
+
+			.hamburger-inner,
+			.hamburger-inner::after,
+			.hamburger-inner::before {
+				border-radius: 0;
+				background-color: $primary;
+				width: 40px;
+				height: 5px;
+			}
+			.hamburger-inner {
+				&::before {
+					top: -12px;
+				}
+				&::after {
+					bottom: -12px;
+				}
+			}
+		}
+		&.is-active {
+			opacity: 1;
+
+			.hamburger-inner,
+			.hamburger.is-active .hamburger-inner:after,
+			.hamburger.is-active .hamburger-inner:before {
+				background: $primary;
+			}
+			.hamburger-inner {
+				&::after {
+					bottom: 0;
+				}
+				&::before {
+					top: 0;
+				}
+			}
+		}
+	}
+}

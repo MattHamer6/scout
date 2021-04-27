@@ -1,0 +1,99 @@
+.team-search {
+	background: $purple-200;
+	padding: 30px 0;
+
+	@include media-breakpoint-up(xl) {
+		padding: 50px 0;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding: 75px 0;
+	}
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		h2 {
+			@extend %h2;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 20px;
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 30px;
+			}
+			@media only screen and (min-width: 1920px) {
+				text-align: left;
+				margin-bottom: 0;
+				width: auto;
+			}
+		}
+		.search-form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			@media only screen and (min-width: 1920px) {
+				justify-content: space-between;
+				width: auto;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 20px;
+				@extend %largeSizes;
+				@extend %fontRegular;
+
+				@media only screen and (min-width: 1920px) {
+					text-align: left;
+					margin-right: 45px;
+					margin-bottom: 0;
+					width: 645px;
+				}
+			}
+			div {
+				display: flex;
+
+				input {
+					border: none;
+					background: white;
+					padding-left: 15px;
+					height: 40px;
+					width: 250px;
+
+					@include media-breakpoint-up(md) {
+						width: 400px;
+					}
+					@include media-breakpoint-up(lg) {
+						width: 450px;
+					}
+					@include media-breakpoint-up(xl) {
+						height: 50px;
+						width: 500px;
+					}
+					@media only screen and (min-width: 1920px) {
+						width: 340px;
+						height: 60px;
+						padding-left: 20px;
+					}
+				}
+				button {
+					border: none;
+					color: $white;
+					background: $primary;
+					width: 40px;
+
+					@include media-breakpoint-up(xl) {
+						width: 50px;
+					}
+					@media only screen and (min-width: 1920px) {
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}

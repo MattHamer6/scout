@@ -1,0 +1,139 @@
+.hero-faq {
+	position: relative;
+	padding: 135px 0 50px;
+	top: -116px;
+	margin-bottom: -116px;
+
+	@include media-breakpoint-up(lg) {
+		top: -106px;
+		margin-bottom: -106px;
+		padding: 100px 0 50px;
+	}
+	@include media-breakpoint-up(xl) {
+		top: -130px;
+		margin-bottom: -130px;
+		padding: 130px 0 50px;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding: 160px 0 50px;
+		top: -157px;
+		margin-bottom: -157px;
+	}
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+		.content {
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+				width: 450px;
+				margin-right: 75px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 565px;
+				margin-right: 75px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 715px;
+				margin-right: 255px;
+			}
+			h1 {
+				@extend %h1;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 25px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 35px;
+				}
+			}
+			p {
+				@extend %headerIntro;
+				width: 100%;
+				margin-bottom: 30px;
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 50px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 75px;
+				}
+				@media only screen and (min-width: 1920px) {
+					width: 680px;
+					margin-bottom: 100px;
+				}
+			}
+			div {
+				display: flex;
+				justify-content: center;
+
+				@include media-breakpoint-up(lg) {
+					justify-content: flex-start;
+				}
+				input {
+					border: none;
+					background: white;
+					padding-left: 15px;
+					height: 40px;
+					width: 250px;
+
+					@include media-breakpoint-up(md) {
+						width: 400px;
+					}
+					@include media-breakpoint-up(lg) {
+						width: 350px;
+					}
+					@include media-breakpoint-up(xl) {
+						height: 50px;
+						width: 400px;
+					}
+					@media only screen and (min-width: 1920px) {
+						width: 480px;
+						height: 60px;
+						padding-left: 20px;
+					}
+				}
+				button {
+					border: none;
+					color: $white;
+					background: $primary;
+					width: 40px;
+
+					@include media-breakpoint-up(xl) {
+						width: 50px;
+					}
+					@media only screen and (min-width: 1920px) {
+						width: 60px;
+					}
+				}
+			}
+		}
+		.image {
+			display: none;
+
+			@include media-breakpoint-up(lg) {
+				width: 400px;
+				display: block;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 450px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 535px;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

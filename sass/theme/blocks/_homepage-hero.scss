@@ -1,0 +1,118 @@
+.homepage-hero {
+	position: relative;
+	background: $secondary;
+	padding: 175px 0 80px;
+	top: -116px;
+	margin-bottom: -116px;
+
+	@include media-breakpoint-up(lg) {
+		top: -106px;
+		margin-bottom: -106px;
+		padding: 220px 0 80px;
+	}
+	@include media-breakpoint-up(xl) {
+		top: -130px;
+		margin-bottom: -130px;
+	}
+	@media only screen and (min-width: 1920px) {
+		top: -157px;
+		margin-bottom: -157px;
+	}
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: column;
+
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+		.content {
+			width: 100%;
+			text-align: center;
+			order: 2;
+
+			@include media-breakpoint-up(lg) {
+				width: 525px;
+				order: 1;
+				text-align: left;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 625px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 680px;
+			}
+			h1 {
+				@extend %h1;
+				margin-bottom: 25px;
+			}
+			p {
+				@extend %headerIntro;
+				margin: 0;
+			}
+			ul {
+				padding: 0;
+				list-style: none;
+				display: flex;
+				margin: 30px 0 0;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+
+				@include media-breakpoint-up(sm) {
+					flex-direction: row;
+				}
+				@include media-breakpoint-up(lg) {
+					margin: 55px 0 0;
+					justify-content: flex-start;
+				}
+				li {
+					&:not(:last-of-type) {
+						margin-bottom: 10px;
+
+						@include media-breakpoint-up(sm) {
+							margin-right: 20px;
+							margin-bottom: 0;
+						}
+					}
+					a {
+						@extend %mainButton;
+						width: 175px;
+
+						@include media-breakpoint-up(sm) {
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+		.image {
+			width: 100%;
+			display: block;
+			text-align: center;
+			order: 1;
+
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+				order: 2;
+				width: 400px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 550px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 675px;
+			}
+			img {
+				max-width: 300px;
+				width: 100%;
+				height: auto;
+
+				@include media-breakpoint-up(lg) {
+					max-width: none;
+				}
+			}
+		}
+	}
+}

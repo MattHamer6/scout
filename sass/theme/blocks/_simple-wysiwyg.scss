@@ -1,0 +1,37 @@
+.simple-wysiwyg {
+	&-wrapper {
+		@extend %padding;
+
+		div {
+			p,
+			ul,
+			li,
+			a {
+				@extend %largeSizes;
+				@extend %fontRegular;
+			}
+			b,
+			strong {
+				@extend %largeSizes;
+				@extend %fontBold;
+			}
+			h3 {
+				@extend %fontBold;
+				margin: 20px 0;
+
+				@include media-breakpoint-up(md) {
+					font-size: 22px;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 28px;
+				}
+				@media only screen and (min-width: 1920px) {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}

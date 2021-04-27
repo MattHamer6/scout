@@ -1,0 +1,205 @@
+.step-navigation {
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+		.sidebar {
+			display: none;
+
+			@include media-breakpoint-up(lg) {
+				display: block;
+				width: 275px;
+				margin-right: 50px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 325px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 415px;
+				margin-right: 140px;
+			}
+			.step {
+				margin-bottom: 30px;
+				border-left: 0px solid $primary;
+				padding-left: 0;
+				transition: all 0.3s ease-in-out;
+
+				b {
+					display: block;
+					@extend %fontBold;
+					@extend %largeSizes;
+					color: $font-base;
+				}
+				p {
+					@extend %fontRegular;
+					@extend %largeSizes;
+					margin: 0;
+					color: $font-base;
+				}
+				&:hover,
+				&.active {
+					border-left-width: 10px;
+					padding-left: 15px;
+
+					@media only screen and (min-width: 1920px) {
+						border-left-width: 15px;
+						padding-left: 30px;
+					}
+					b {
+						color: $primary;
+					}
+				}
+			}
+		}
+		.content {
+			width: 100%;
+
+			@include media-breakpoint-up(lg) {
+				width: 525px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 650px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 815px;
+			}
+
+			&-wrapper {
+				span {
+					display: block;
+					@extend %mediumSizes;
+				}
+				h3 {
+					@extend %h2;
+				}
+				div {
+					margin-top: 1rem;
+
+					@include media-breakpoint-up(lg) {
+						margin-top: 20px;
+					}
+					@include media-breakpoint-up(xl) {
+						margin-top: 30px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin-top: 40px;
+					}
+
+					p,
+					b,
+					strong,
+					ul,
+					a {
+						@extend %mediumSizes;
+					}
+					p,
+					a,
+					ul {
+						@extend %fontRegular;
+					}
+					b,
+					strong {
+						@extend %fontBold;
+					}
+					p {
+						margin-bottom: 1rem;
+
+						@include media-breakpoint-up(lg) {
+							margin-bottom: 20px;
+						}
+						@include media-breakpoint-up(xl) {
+							margin-bottom: 30px;
+						}
+						@media only screen and (min-width: 1920px) {
+							margin-bottom: 40px;
+						}
+					}
+					ul {
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+						li {
+							position: relative;
+							padding: 0 0 0 15px;
+							margin-bottom: 1rem;
+
+							@include media-breakpoint-up(lg) {
+								margin-bottom: 20px;
+								padding: 0 0 0 20px;
+							}
+							@include media-breakpoint-up(xl) {
+								margin-bottom: 30px;
+							}
+							@media only screen and (min-width: 1920px) {
+								margin-bottom: 40px;
+								padding: 0 0 0 25px;
+							}
+
+							&::before {
+								content: "";
+								position: absolute;
+								left: 0;
+								background-color: $primary;
+								border-radius: 50%;
+								top: 7px;
+								width: 7px;
+								height: 7px;
+
+								@include media-breakpoint-up(lg) {
+									top: 6px;
+								}
+								@include media-breakpoint-up(xl) {
+									top: 8px;
+									width: 10px;
+									height: 10px;
+								}
+								@media only screen and (min-width: 1920px) {
+									width: 13px;
+									height: 13px;
+								}
+							}
+						}
+					}
+				}
+				@include media-breakpoint-up(lg) {
+					&:not(.active) {
+						display: none;
+					}
+				}
+			}
+		}
+		.pagination {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px 0;
+
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+			p {
+				margin: 0;
+				font-size: 18px;
+				@extend %fontBold;
+				display: flex;
+				align-items: center;
+
+				&:first-of-type {
+					i {
+						margin-right: 5px;
+					}
+				}
+				&:last-of-type {
+					i {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}

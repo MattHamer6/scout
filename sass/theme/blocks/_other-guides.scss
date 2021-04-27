@@ -1,0 +1,171 @@
+.other-guides {
+	&-wrapper {
+		@extend %padding;
+		border-bottom: 1px solid $grey-200;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+		.content {
+			width: 100%;
+			margin-bottom: 30px;
+			text-align: center;
+
+			@include media-breakpoint-up(xl) {
+				margin-bottom: 50px;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 350px;
+				margin-bottom: 0;
+				margin-right: 60px;
+				text-align: left;
+			}
+			h2 {
+				@extend %h2;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 30px;
+				}
+			}
+			p {
+				@extend %fontRegular;
+				@extend %largeSizes;
+				margin: 0;
+			}
+		}
+		.guides {
+			width: 100%;
+
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			@media only screen and (min-width: 1920px) {
+				width: auto;
+			}
+			.guide {
+				@include media-breakpoint-up(lg) {
+					width: calc(100% / 3 - 16px);
+				}
+				@media only screen and (min-width: 1920px) {
+					width: 389px;
+				}
+				&-wrapper {
+					.image {
+						@extend %backgroundImage;
+						width: 100%;
+						height: 225px;
+
+						@include media-breakpoint-up(lg) {
+							height: 225px;
+						}
+						@include media-breakpoint-up(xl) {
+							height: 250px;
+						}
+					}
+					.guide-content {
+						width: 100%;
+						padding: 20px;
+
+						@include media-breakpoint-up(lg) {
+							min-height: 245px;
+						}
+						@include media-breakpoint-up(xl) {
+							padding: 40px;
+							min-height: 315px;
+						}
+						@media only screen and (min-width: 1920px) {
+							min-height: 357px;
+						}
+						h3 {
+							@extend %fontBold;
+							@extend %largeSizes;
+							margin-bottom: 1rem;
+
+							@media only screen and (min-width: 1920px) {
+								margin-bottom: 20px;
+							}
+						}
+						p {
+							@extend %fontRegular;
+							@extend %smallSizes;
+							margin-bottom: 1rem;
+
+							@include media-breakpoint-up(lg) {
+								margin-bottom: 20px;
+							}
+							@include media-breakpoint-up(xl) {
+								margin-bottom: 30px;
+							}
+							@media only screen and (min-width: 1920px) {
+								margin-bottom: 40px;
+							}
+						}
+						a {
+							display: block;
+							@extend %fontBold;
+							@extend %smallSizes;
+							color: $primary;
+
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+				}
+				&:nth-of-type(even) {
+					.guide-content {
+						background: $secondary;
+					}
+				}
+				&:nth-of-type(odd) {
+					.guide-content {
+						background: $purple-200;
+					}
+				}
+				&:not(:last-of-type) {
+					@include media-breakpoint-up(md) {
+						margin-right: 16px;
+					}
+				}
+			}
+		}
+		.slick-dots {
+			padding: 0;
+			margin: 20px 0 0;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+
+			li {
+				&:not(:last-of-type) {
+					margin-right: 15px;
+				}
+				.dot {
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					border: 1px solid $grey-100;
+					background: transparent;
+					transition: all 0.3s ease-in-out;
+				}
+				&.slick-active {
+					.dot {
+						background: $grey-100;
+					}
+				}
+			}
+		}
+	}
+	&:last-of-type {
+		.other-guides-wrapper {
+			border-bottom: none;
+		}
+	}
+}

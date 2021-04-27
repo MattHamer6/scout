@@ -1,0 +1,58 @@
+.footer {
+	.wpcf7 {
+		@include media-breakpoint-up(lg) {
+			margin: 0 !important;
+		}
+
+		form {
+			p {
+				margin: 0;
+				display: flex;
+				justify-content: center;
+
+				@include media-breakpoint-up(lg) {
+					justify-content: flex-start;
+				}
+				br {
+					display: none;
+				}
+				input {
+					border: none;
+					border-radius: 2px 0 0 2px;
+					padding-left: 1rem;
+					font-size: 14px;
+					height: 35px;
+
+					@include media-breakpoint-up(xl) {
+						height: 40px;
+						font-size: 16px;
+					}
+					@media only screen and (min-width: 1920px) {
+						height: 58px;
+						width: 400px;
+						padding-left: 20px;
+					}
+				}
+				button {
+					background: $primary;
+					color: $white;
+					border: none;
+					border-radius: 0 2px 2px 0;
+					@extend %fontBold;
+					font-size: 14px;
+					padding: 0 20px;
+					height: 35px;
+
+					@include media-breakpoint-up(xl) {
+						font-size: 16px;
+						height: 40px;
+					}
+					@media only screen and (min-width: 1920px) {
+						padding: 0 35px;
+						height: 58px;
+					}
+				}
+			}
+		}
+	}
+}

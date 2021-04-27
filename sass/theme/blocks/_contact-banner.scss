@@ -1,0 +1,52 @@
+.contact-banner {
+	background: $purple-200;
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		.content {
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(xl) {
+				width: 450px;
+				text-align: left;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 625px;
+			}
+			h2 {
+				@extend %h2;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 30px;
+				}
+			}
+			p {
+				@extend %fontRegular;
+				@extend %largeSizes;
+				margin: 0;
+			}
+		}
+		.form {
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(xl) {
+				width: 625px;
+				text-align: left;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 800px;
+			}
+		}
+	}
+}

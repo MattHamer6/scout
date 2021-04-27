@@ -1,0 +1,53 @@
+.contact-form {
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		.content {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+
+			@include media-breakpoint-up(xl) {
+				width: 400px;
+				text-align: left;
+				margin-bottom: 0;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 485px;
+			}
+			h2 {
+				@extend %h2;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-bottom: 30px;
+				}
+			}
+			p {
+				margin: 0;
+				@extend %fontRegular;
+				@extend %largeSizes;
+			}
+		}
+		.form {
+			width: 100%;
+			text-align: center;
+
+			@include media-breakpoint-up(xl) {
+				width: 650px;
+				text-align: left;
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 1100px;
+			}
+		}
+	}
+}

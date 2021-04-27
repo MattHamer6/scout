@@ -1,0 +1,35 @@
+@import "mobile-header";
+
+.header {
+	position: relative;
+	z-index: 99;
+
+	.navbar {
+		padding: 0;
+
+		.navbar-brand {
+			padding: 0;
+			margin: 0;
+
+			img {
+				width: 115px;
+
+				@include media-breakpoint-up(sm) {
+					width: 150px;
+				}
+				@include media-breakpoint-up(lg) {
+					width: 135px;
+				}
+				@include media-breakpoint-up(xl) {
+					width: 165px;
+				}
+				@media only screen and (min-width: 1920px) {
+					width: 200px;
+				}
+			}
+		}
+		&-collapse {
+			display: none;
+		}
+	}
+}

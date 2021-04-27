@@ -1,0 +1,24 @@
+.large-container {
+	@media only screen and (min-width: 1920px) {
+		max-width: 1640px;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.8s ease forwards;
+}
+.already-visible {
+	transform: translateY(0);
+	animation: none;
+}
+
+@keyframes come-in {
+	to {
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,83 @@
+@import "../components/hamburger";
+
+.mobile-menu {
+	display: none;
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: $white;
+	z-index: 98;
+
+	&.menu-active {
+		display: flex;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	&-wrapper {
+		height: 100%;
+		text-align: left;
+		padding: 50px 0;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				&:not(:last-of-type) {
+					margin-bottom: 30px;
+				}
+				a {
+					@extend %fontBold;
+					font-size: 24px;
+					color: $primary;
+				}
+				ul {
+					li {
+						margin-bottom: 0 !important;
+						padding: 0;
+
+						a {
+							@extend %fontRegular;
+							font-size: 18px;
+							color: $primary;
+						}
+					}
+				}
+				&.col-4 {
+					flex: auto;
+					max-width: none;
+					width: 100%;
+				}
+				&.get-started,
+				&.sign-in {
+					width: 215px;
+					text-align: center;
+
+					a {
+						display: inline-block;
+						color: $white;
+						text-transform: uppercase;
+						@extend %fontBold;
+						@extend %largeSizes;
+						padding: 15px 0;
+
+						&:hover {
+							color: $white;
+						}
+					}
+				}
+				&.get-started {
+					background: $black;
+				}
+				&.sign-in {
+					background: $primary;
+				}
+			}
+		}
+	}
+}

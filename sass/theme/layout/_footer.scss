@@ -1,0 +1,256 @@
+@import "../components/newsletter";
+
+.footer {
+	background: $grey-100;
+	padding: 30px 0;
+
+	@include media-breakpoint-up(xl) {
+		padding: 50px 0;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding: 75px 0;
+	}
+	&-wrapper {
+		// Footer Info
+		.footer-info {
+			display: flex;
+			align-items: flex-start;
+			padding-bottom: 20px;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-start;
+			}
+			@include media-breakpoint-up(xl) {
+				padding-bottom: 25px;
+			}
+			@media only screen and (min-width: 1920px) {
+				padding-bottom: 40px;
+				justify-content: flex-start;
+			}
+			.logo {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 30px;
+
+				@include media-breakpoint-up(md) {
+					width: auto;
+					text-align: left;
+					margin-bottom: 0;
+				}
+				@include media-breakpoint-up(lg) {
+					display: flex;
+					align-items: center;
+					margin-right: 75px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin-right: 100px;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-right: 125px;
+				}
+				img {
+					width: 150px;
+					height: auto;
+					margin-bottom: 20px;
+
+					@include media-breakpoint-up(lg) {
+						margin-right: 50px;
+					}
+					@include media-breakpoint-up(xl) {
+						margin-right: 75px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin-right: 100px;
+					}
+				}
+				p {
+					margin: 0;
+					color: $white;
+					@extend %fontRegular;
+					font-size: 10pt;
+
+					@include media-breakpoint-up(md) {
+						font-size: 14px;
+					}
+					@include media-breakpoint-up(xl) {
+						font-size: 16px;
+					}
+					@media only screen and (min-width: 1920px) {
+						font-size: 18px;
+					}
+				}
+			}
+			.links {
+				width: 100%;
+				text-align: center;
+
+				@include media-breakpoint-up(sm) {
+					width: auto;
+					text-align: left;
+				}
+				@media only screen and (min-width: 1920px) {
+					margin-right: 150px;
+				}
+				b {
+					text-transform: uppercase;
+					color: $white;
+					display: block;
+					@extend %fontBold;
+					@extend %mediumSizes;
+					margin-bottom: 5px;
+					text-align: center;
+					font-size: 13pt;
+
+					@include media-breakpoint-up(md) {
+						text-align: left;
+						margin-bottom: 1rem;
+					}
+					@include media-breakpoint-up(lg) {
+						font-size: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+						font-size: 17px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin-bottom: 20px;
+						font-size: 20px;
+					}
+				}
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+
+					@include media-breakpoint-up(md) {
+						text-align: left;
+					}
+					@include media-breakpoint-up(lg) {
+						column-count: 2;
+					}
+					li {
+						&:not(:last-of-type) {
+							margin-bottom: 5px;
+
+							@include media-breakpoint-up(md) {
+								margin-bottom: 1rem;
+							}
+						}
+						a {
+							color: $white;
+							@extend %fontRegular;
+							font-size: 10pt;
+
+							@include media-breakpoint-up(md) {
+								font-size: 14px;
+							}
+							@include media-breakpoint-up(xl) {
+								font-size: 16px;
+							}
+							@media only screen and (min-width: 1920px) {
+								font-size: 18px;
+							}
+
+							&:hover {
+								text-decoration: none;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+			.newsletter {
+				width: 100%;
+				text-align: center;
+				margin-top: 30px;
+
+				@include media-breakpoint-up(lg) {
+					margin-top: 0;
+					width: auto;
+					text-align: left;
+				}
+				b {
+					text-transform: uppercase;
+					color: $white;
+					display: block;
+					@extend %fontBold;
+					@extend %mediumSizes;
+					margin-bottom: 1rem;
+
+					@media only screen and (min-width: 1920px) {
+						margin-bottom: 20px;
+					}
+				}
+				p {
+					color: $white;
+					@extend %mediumSizes;
+					@extend %fontRegular;
+
+					@include media-breakpoint-up(xl) {
+						margin-bottom: 20px;
+					}
+					@media only screen and (min-width: 1920px) {
+						margin-bottom: 30px;
+						width: 520px;
+					}
+				}
+			}
+		}
+		// Disclaimer
+		.footer-disclaimer {
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+			text-align: center;
+			padding: 30px 0;
+
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 35px 0;
+			}
+			@media only screen and (min-width: 1920px) {
+				padding: 45px 0;
+			}
+			p {
+				@extend %fontRegular;
+				@extend %smallSizes;
+				color: $white;
+
+				@include media-breakpoint-down(md) {
+					font-size: 10pt;
+				}
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+		// Copyright
+		.footer-copyright {
+			padding: 20px 0 0;
+
+			@include media-breakpoint-up(xl) {
+				padding: 30px 0 0;
+			}
+			@media only screen and (min-width: 1920px) {
+				padding: 45px 0 0;
+			}
+			p {
+				@extend %fontRegular;
+				@extend %smallSizes;
+				margin: 0;
+				color: $white;
+				text-align: center;
+
+				@include media-breakpoint-down(md) {
+					font-size: 10pt;
+				}
+				@include media-breakpoint-up(md) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}

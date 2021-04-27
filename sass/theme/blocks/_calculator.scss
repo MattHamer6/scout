@@ -1,0 +1,26 @@
+.calculator {
+	@extend %padding;
+
+	&-wrapper {
+		& > h2 {
+			text-align: center;
+			@extend %h2;
+			margin-bottom: 1rem;
+		}
+		& > p {
+			text-align: center;
+			@extend %fontRegular;
+			@extend %largeSizes;
+			margin-bottom: 30px;
+		}
+		& > div {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		p.notice {
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
+	}
+}

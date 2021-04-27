@@ -1,0 +1,46 @@
+@font-face {
+	font-family: fontBold;
+	src: url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GBold.otf")
+			format("opentype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GBold.ttf")
+			format("truetype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GBold.woff")
+			format("woff");
+}
+
+@font-face {
+	font-family: fontMedium;
+	src: url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GMedium.otf")
+			format("opentype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GMedium.ttf")
+			format("truetype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GMedium.woff")
+			format("woff");
+}
+
+@font-face {
+	font-family: fontRegular;
+	src: url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GRegular.otf")
+			format("opentype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GRegular.ttf")
+			format("truetype"),
+		url("/wp-content/themes/Visions/fonts/custom/FFMarkW1GRegular.woff")
+			format("woff");
+}
+
+%fontBold {
+	font-family: fontBold;
+	font-style: normal;
+	font-weight: bold;
+}
+
+%fontMedium {
+	font-family: fontMedium;
+	font-style: normal;
+}
+
+%fontRegular {
+	font-family: fontRegular;
+	font-style: normal;
+	font-weight: normal;
+}

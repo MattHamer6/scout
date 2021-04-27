@@ -1,0 +1,145 @@
+%backgroundImage {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// Font Sizes
+%h1 {
+	@extend %fontBold;
+	color: $font-base;
+	font-size: 32px;
+
+	@include media-breakpoint-up(md) {
+		font-size: 42px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 50px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 65px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 83px;
+	}
+}
+
+%h2 {
+	margin: 0;
+	@extend %fontBold;
+	color: $font-base;
+	font-size: 28px;
+
+	@include media-breakpoint-up(md) {
+		font-size: 32px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 36px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 44px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 58px;
+	}
+}
+
+%headerIntro {
+	@extend %fontRegular;
+	color: $font-base;
+	font-size: 18px;
+
+	@include media-breakpoint-up(md) {
+		font-size: 22px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 24px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 28px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 32px;
+	}
+}
+
+%largeSizes {
+	font-size: 18px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 16px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 18px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 24px;
+	}
+}
+
+%mediumSizes {
+	font-size: 18px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 15px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 17px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 20px;
+	}
+}
+
+%smallSizes {
+	font-size: 18px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 14px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 16px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 18px;
+	}
+}
+
+%mainButton {
+	display: inline-block;
+	background: $primary;
+	color: $white;
+	transition: all 0.3s ease-in-out;
+	font-size: 16px;
+	padding: 10px 25px;
+
+	@include media-breakpoint-up(lg) {
+		padding: 15px 30px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 18px;
+		padding: 15px 35px;
+	}
+	@media only screen and (min-width: 1920px) {
+		font-size: 20px;
+		padding: 20px 40px;
+	}
+	&:hover {
+		background: lighten($primary, 10%);
+		text-decoration: none;
+	}
+}
+
+%padding {
+	padding: 30px 0;
+
+	@include media-breakpoint-up(lg) {
+		padding: 50px 0;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 75px 0;
+	}
+	@media only screen and (min-width: 1920px) {
+		padding: 100px 0;
+	}
+}

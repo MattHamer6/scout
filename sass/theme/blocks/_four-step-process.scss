@@ -1,0 +1,233 @@
+.four-step-process {
+	@extend %padding;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@media only screen and (min-width: 1920px) {
+			justify-content: space-between;
+		}
+		h2 {
+			@extend %h2;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+
+			@media only screen and (min-width: 1920px) {
+				text-align: left;
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+		.steps {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			@include media-breakpoint-up(lg) {
+				flex-wrap: nowrap;
+			}
+			.step {
+				position: relative;
+				display: flex;
+				width: 100%;
+				flex-direction: row;
+				align-items: center;
+
+				@include media-breakpoint-up(lg) {
+					flex-direction: column;
+				}
+				&:not(:last-of-type) {
+					margin-bottom: 20px;
+
+					@include media-breakpoint-up(lg) {
+						margin-bottom: 0;
+						margin-right: 60px;
+					}
+				}
+
+				.count {
+					position: absolute;
+					width: auto;
+					text-align: center;
+					margin-right: 40px;
+					height: 100%;
+
+					@include media-breakpoint-up(md) {
+						margin-right: 50px;
+						position: relative;
+						height: auto;
+					}
+					@include media-breakpoint-up(lg) {
+						width: 100%;
+						margin-right: 0;
+					}
+					b {
+						display: block;
+						@extend %fontBold;
+						font-size: 20px;
+
+						@include media-breakpoint-up(md) {
+							font-size: 30px;
+						}
+						@include media-breakpoint-up(lg) {
+							font-size: 50px;
+						}
+						@include media-breakpoint-up(xl) {
+							font-size: 75px;
+						}
+						@media only screen and (min-width: 1920px) {
+							font-size: 96px;
+						}
+					}
+					.seperator {
+						position: absolute;
+						top: 8px;
+
+						@include media-breakpoint-down(md) {
+							left: 40px;
+						}
+						@include media-breakpoint-down(lg) {
+							left: 35px;
+							display: flex;
+							justify-content: center;
+							align-items: flex-start;
+						}
+
+						@include media-breakpoint-between(md, lg) {
+							top: 15px;
+						}
+						@include media-breakpoint-up(lg) {
+							display: flex;
+							align-items: center;
+							top: 50%;
+						}
+						.circle {
+							position: relative;
+							border-radius: 50%;
+							background: $orange;
+							width: 13px;
+							height: 13px;
+							left: -8px;
+
+							@include media-breakpoint-up(lg) {
+								left: auto;
+							}
+							@include media-breakpoint-up(xl) {
+								width: 18px;
+								height: 18px;
+							}
+						}
+						.line {
+							width: 3px;
+							background: $primary;
+							height: 100%;
+
+							@include media-breakpoint-up(md) {
+								height: 85%;
+							}
+							@include media-breakpoint-up(lg) {
+								height: 3px;
+								width: 75px;
+							}
+							@include media-breakpoint-up(xl) {
+								width: 90px;
+							}
+						}
+						&:first-of-type {
+							left: 50px;
+							height: 200%;
+
+							@include media-breakpoint-up(lg) {
+								left: -40px;
+								height: auto;
+							}
+							@media only screen and (min-width: 1920px) {
+								left: -30px;
+							}
+						}
+						&:last-of-type {
+							display: none;
+
+							@include media-breakpoint-up(lg) {
+								display: flex;
+								right: -120px;
+							}
+							@include media-breakpoint-up(xl) {
+								right: -40px;
+							}
+							@media only screen and (min-width: 1920px) {
+								right: -30px;
+							}
+						}
+					}
+					&:last-of-type {
+						.seperator {
+							.line {
+								display: none;
+
+								@include media-breakpoint-up(lg) {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+				.text {
+					text-align: left;
+					margin-left: 85px;
+
+					@include media-breakpoint-up(md) {
+						margin-left: 25px;
+					}
+					@include media-breakpoint-up(lg) {
+						text-align: center;
+						margin-left: 0;
+					}
+					p {
+						margin: 0;
+						@extend %fontRegular;
+						@extend %largeSizes;
+
+						@media only screen and (min-width: 1920px) {
+							width: 260px;
+						}
+					}
+				}
+				&:first-of-type {
+					.seperator {
+						&:first-of-type {
+							@include media-breakpoint-up(lg) {
+								display: none;
+							}
+						}
+					}
+				}
+				&:last-of-type {
+					.seperator {
+						.line {
+							display: none;
+
+							@include media-breakpoint-up(lg) {
+								display: block;
+							}
+						}
+						.circle {
+							left: -5px;
+
+							@include media-breakpoint-up(lg) {
+								left: auto;
+							}
+						}
+						&:last-of-type {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

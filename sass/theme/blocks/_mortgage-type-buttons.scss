@@ -1,0 +1,114 @@
+.mortgage-type-buttons {
+	&-wrapper {
+		border-top: 1px solid $grey-200;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 30px 0;
+
+		@include media-breakpoint-up(lg) {
+			padding: 50px 0;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 75px 0;
+		}
+		@media only screen and (min-width: 1920px) {
+			padding: 200px 0 115px;
+		}
+		h3 {
+			@extend %h2;
+			margin: 0;
+			text-align: center;
+			width: 100%;
+
+			@media only screen and (min-width: 1920px) {
+				width: 360px;
+				text-align: left;
+			}
+			br {
+				display: none;
+
+				@media only screen and (min-width: 1920px) {
+					display: block;
+				}
+			}
+		}
+		.boxes {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			margin-top: 30px;
+
+			@media only screen and (min-width: 1920px) {
+				width: auto;
+				margin-top: 0;
+			}
+		}
+		a {
+			display: block;
+			color: $font-base;
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				width: calc(100% / 3 - 16px);
+			}
+			@media only screen and (min-width: 1920px) {
+				width: 395px;
+			}
+			&:not(:last-of-type) {
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(md) {
+					margin-bottom: 0;
+					margin-right: 1rem;
+				}
+			}
+			div {
+				background: $purple-200;
+				text-align: center;
+				padding: 20px 0;
+
+				@include media-breakpoint-up(lg) {
+					padding: 30px 0;
+				}
+				@media only screen and (min-width: 1920px) {
+					padding: 45px 0;
+				}
+				img {
+					width: auto;
+					margin-bottom: 20px;
+					height: 75px;
+
+					@media only screen and (min-width: 1920px) {
+						height: 100px;
+					}
+				}
+				p {
+					margin: 0;
+					@extend %fontMedium;
+					font-size: 20px;
+
+					@include media-breakpoint-up(md) {
+						font-size: 22px;
+					}
+					@include media-breakpoint-up(lg) {
+						font-size: 24px;
+					}
+					@include media-breakpoint-up(xl) {
+						font-size: 28px;
+					}
+					@media only screen and (min-width: 1920px) {
+						font-size: 36px;
+					}
+				}
+			}
+			&:hover {
+				color: $font-base;
+				text-decoration: none;
+			}
+		}
+	}
+}
